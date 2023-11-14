@@ -1,2 +1,3 @@
-# payments
-Noria Payments API
+# hooks
+
+Noria Hooks API
