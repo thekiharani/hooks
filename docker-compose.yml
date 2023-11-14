@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  noria-payments:
+    image: noria-payments:1.0.0
+    container_name: noria-payments
+    pull_policy: if_not_present
+    env_file:
+      - .env
+    environment:
+      PORT: ${PORT}
+      APP_ENV: production
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+      - noria
+
+networks:
+  noria:
+    external: true
